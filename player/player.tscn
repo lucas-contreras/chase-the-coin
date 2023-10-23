@@ -70,7 +70,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_vkulh")
 metadata/_edit_group_ = true
 

@@ -53,7 +53,12 @@ func getDie():
 func _on_area_entered(area):
 	if area.is_in_group("Coins"):
 		area.pick();
-		emit_signal(signalNameHarvest);
+		emit_signal(signalNameHarvest, "coin");
 	
 	if area.is_in_group("Enemies"):
 		getDie();
+		emit_signal(signalNameGetHurt);
+		
+	if area.is_in_group("Powerups"):
+		area.pick();
+		emit_signal(signalNameHarvest, "powerup");
